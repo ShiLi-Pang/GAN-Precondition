@@ -22,50 +22,34 @@ In addition, the framework is designed to support transferability across differe
 * Support transferability across frequency settings 
 
 ---
-
 ## 📂 Project Structure
 
 ```
-src/
-├── models/            # GAN architectures
-├── solvers/           # Iterative solvers (interface)
-├── physics/           # Helmholtz operator (simplified)
-├── preconditioners/   # Learned preconditioner interface
-└── utils/             # Visualization tools
+GAN_preconditioned_3D/
+├── generator_3D.py        # Generator network
+├── discriminator_3D.py    # Discriminator network
+├── bicgstab_3D.py         # Iterative solver (BiCGSTAB)
+├── ofd_matrix_4_3D.py     # Helmholtz operator construction
+├── GAN_fd_3D.py           # GAN-based preconditioner
 
-scripts/
-└── demo_inference.py  # Demo script
+GANtrain_3D/
+├── Homogeneous_example.ipynb                   # Training scripts (simplified)
+
+GANtrain_TL_3D/
+├── TL_21Hz_Homogeneous_example                    # Transfer learning scripts (simplified)
 ```
-
----
-
-## 🚀 Quick Start
-
-```bash
-pip install -r requirements.txt
-python scripts/demo_inference.py
-```
-
-> Note: This demo uses a simplified setup and does not reproduce full experimental results.
-
 ---
 
 ## ⚠️ Important Notes
 
 This repository is intended for **research demonstration purposes only**:
 
-* The full training pipeline is **not included**
-* Some implementation details are intentionally omitted
-* The original datasets are **not publicly available**
+* The full training pipeline is **not provided in a reproducible form**
+* Some implementation details are **simplified or omitted**
+* The provided scripts are intended to illustrate the core idea rather than reproduce full experimental results
 
 ---
 
 ## 📊 Reproducibility
 
-Due to the complexity of the full system and data dependencies, this repository **does not aim to fully reproduce** the experimental results reported in the paper.
-
----
-
-```
-(Your paper citation here)
-```
+Due to the complexity of the full workflow and data dependencies, this repository **does not aim to fully reproduce** the results reported in the paper.
