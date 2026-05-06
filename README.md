@@ -6,7 +6,7 @@ This repository provides a **demonstration implementation** of a GAN-based preco
 
 ## 🔍 Overview
 
-Solving large-scale linear systems is a central challenge in applications such as **Reverse Time Migration (RTM)** and **Full waveform inversion（FFWI）**.
+Solving large-scale linear systems is a central challenge in applications such as **Reverse Time Migration (RTM)** and **Full waveform inversion（FWI）**.
 
 This project explores the use of **Generative Adversarial Networks (GANs)** to learn an implicit approximation of the inverse impedance matrix, which is then used as a preconditioner within Krylov subspace methods (e.g., BiCGSTAB).
 
